@@ -1,0 +1,49 @@
+.beer-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+  }
+  .beer-list .card {
+    background: #cbccbb;
+    color: #333;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  .beer-list .card:hover {
+    transform: scale(1.1);
+  }
+  .beer-list .card h3 {
+    color: #392818;
+    margin-bottom: 6px;
+  }
+  .beer-list .card span{
+      font-weight: 600;
+  }
+  .beer-list .card p {
+    color: #64462a;
+    font-size: 0.9em;
+  }
+  .beer-list .card div {
+    color: #555;
+    font-size: 0.7em;
+    margin: 20px 0;
+    line-height: 1.5em;
+  }
+  .beer-list .card a {
+    color: #555;
+    text-decoration: none;
+    display: block;
+    background: #e2e2e2;
+    font-size: 0.9em;
+    width: 100px;
+    text-align: center;
+    width: 120px;
+    padding: 8px;
+    border-radius: 4px;
+    margin: 20px auto 0;
+  }
