@@ -29,6 +29,16 @@
       "bitterness": "24 IBU",
       "description": "KREMASTI TAMNI EJL PROŽET NOTAMA ČOKOLADE, KAFE I LEŠNIKA",
       "descriptionFull": "Očekuj nalet slasnih nota mlečne čokolade, lešnika i kafe koje se rastapaju i dugo zadržavaju u ustima. Intenzivan ukus i kremasto telo podsetiće te na omiljeni kolač sa kojim ne možeš da se zaustaviš na jednom pojedenom parčetu."
+    },
+    {
+      "title": "Penal",
+      "distributor": "Ravangrad",
+      "type": "IPA",
+      "abv": "6.2 %",
+      "bitterness": "",
+      "description": "Citusna somborska IPA finih nota",
+      "descriptionFull": "Odlikuju ga izrazite citrusne i tropske hmeljne note i u ukusu i u mirisu. Iskorišćen je pun potencijal ‘Mosaic’ sorte hmelja koji mu daje poseban karakter.\n\n",
+      "id": "FACkxTC"
     }
   ]
 }

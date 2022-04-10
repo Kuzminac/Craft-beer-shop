@@ -1,6 +1,7 @@
 import './Create.css'
 
 import { useState } from 'react'
+import { useFetch } from '../../hooks/useFetch'
 
 import React from 'react'
 
@@ -13,9 +14,11 @@ export default function Create() {
   const [description, setDescription] = useState("")
   const [descriptionFull, setDescriptionFull] = useState("")
 
+  const { postData, data, error } = useFetch("http://localhost:3000/beers", "POST")
+
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(title, distributor,type, abv, bitterness, description, descriptionFull)
+    postData({ title, distributor,type, abv: abv + ' %', bitterness, description, descriptionFull })
   }
   return (
     <div className='create'>
@@ -52,7 +55,7 @@ export default function Create() {
         <label>
           <span>Abv: </span>
           <input 
-            type="text"
+            type="number"
             onChange={(e) => setAbv(e.target.value)}
             value={abv}
             required
@@ -64,7 +67,6 @@ export default function Create() {
             type="text"
             onChange={(e) => setBitterness(e.target.value)}
             value={bitterness}
-            required
           />
         </label>
         <label>
