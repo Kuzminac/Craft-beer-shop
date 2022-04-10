@@ -14,7 +14,20 @@ export default function Beer() {
     <div className='beer'>
       {error && <p className='error'>{error}</p>}
       {isPending && <p className='loading'>Loading...</p>}
-      {beer && <h1>{beer.title}</h1>}
+      {beer && (
+        <>
+          <h2 className='page-title'>{beer.title}</h2>
+          <ul>
+            <li><p>distributor: <span>{beer.distributor}</span></p></li>
+            <li><p>type: <span>{beer.type}</span></p></li>
+            <li><p>abv: <span>{beer.abv}</span></p></li>
+            <li><p>bitterness: <span>{beer.bitterness}</span></p></li>
+          </ul>
+          <p><span>{beer.descriptionFull}</span></p>
+        </>
+      )}
     </div>
   )
 }
+
+

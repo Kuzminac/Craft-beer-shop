@@ -6,7 +6,9 @@
       "type": "Pale Ale",
       "distributor": "Salto",
       "abv": " 5.7%",
-      "description": "OSVEŽAVAJUĆI SVETLI EJL TROPSKIH NOTA"
+      "bitterness": "35 IBU",
+      "description": "OSVEŽAVAJUĆI SVETLI EJL TROPSKIH NOTA",
+      "descriptionFull": "Salto Pale Ale je nefiltrirani, nepasterizovani zlatno-žuti ejl sa puno aromatičnog hmelja. Odlikuje ga balans tropskih nota hmelja (poput grejpa, mandarine, zove) i meke, prijatne gorčine. Salto Pale Ale je inspirisan američkim IPA stilom (India Pale Ale), ima izrazito jaku hmeljnu aromu, ali manji sadržaj alkohola i manje gorčine nego klasično IPA pivo. Rezultat je pitko, izbalansirano, osvežavajuće pivo punog ukusa."
     },
     {
       "id": "2",
@@ -14,7 +16,9 @@
       "type": "IPA",
       "distributor": "Salto",
       "abv": " 6.5%",
-      "description": "PITKI EJL, BOGATE HMELJNE AROME I UMERENOG KARAMELNOG TELA"
+      "bitterness": "45 IBU",
+      "description": "PITKI EJL, BOGATE HMELJNE AROME I UMERENOG KARAMELNOG TELA",
+      "descriptionFull": "Ovo je prvi recept koji smo skuvali u našoj novoj pivari u Beogradu. Pored imena koje nosi, posebno smo ponosni na balans ovog piva. Kombinovanjem Amarillo, Cascade i Centennial hmelja dobili smo cvetno-voćni buke skladnog karaktera koji se savršeno uklapa sa laganim karamelno-biskvitnim telom. Zahvaljujući dugom periodu odležavanja, alkoholne note su vešto umekšane, pa je ovo pivo odličan izbor za duge zabave sa društvom."
     },
     {
       "id": "3",
@@ -22,7 +26,9 @@
       "type": "Stout",
       "distributor": "Salto",
       "abv": " 5.5%",
-      "description": "KREMASTI TAMNI EJL PROŽET NOTAMA ČOKOLADE, KAFE I LEŠNIKA"
+      "bitterness": "24 IBU",
+      "description": "KREMASTI TAMNI EJL PROŽET NOTAMA ČOKOLADE, KAFE I LEŠNIKA",
+      "descriptionFull": "Očekuj nalet slasnih nota mlečne čokolade, lešnika i kafe koje se rastapaju i dugo zadržavaju u ustima. Intenzivan ukus i kremasto telo podsetiće te na omiljeni kolač sa kojim ne možeš da se zaustaviš na jednom pojedenom parčetu."
     }
   ]
 }

@@ -1,0 +1,22 @@
+.beer {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+    background: #cbccbb;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.beer ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+.beer li {
+    list-style-type: none;
+    margin: 10px;
+}
+.beer span {
+    font-weight: 500;
+}

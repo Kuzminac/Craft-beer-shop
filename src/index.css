@@ -9,13 +9,13 @@ body {
   margin: 0;
   font-size: 1.4em;
   background: #dfdfdf;
-  color: #333;
+  color: #392818;
 }
 h1,h2,h3,p {
   margin: 0;
 }
 input, textarea {
-  color: #333;
+  color: #392818;
   padding: 8px;
   font-size: 1em;
   border-radius: 4px;
@@ -28,7 +28,7 @@ input, textarea {
 .page-title {
   text-align: center;
   margin: 40px auto;
-  color: #333;
+  color: #392818;
 }
 .loading, .error {
   text-align: center;
