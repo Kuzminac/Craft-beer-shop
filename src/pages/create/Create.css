@@ -1,0 +1,25 @@
+.create {
+    max-width: 480px;
+    margin: 60px auto;
+}
+.create input , textarea {
+    background: #e0e0d7;
+    text-decoration: none;
+}
+.create label span {
+    display: block;
+    margin: 12px 0 5px;
+}
+.create button {
+    color: #fff;
+    display: block;
+    width: 100px;
+    background: #392818;
+    font-size: 1em;
+    margin: 20px auto;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 8px 20px;
+    border: 0;
+    border-radius: 4px;
+}
