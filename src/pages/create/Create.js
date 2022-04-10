@@ -1,7 +1,8 @@
 import './Create.css'
 
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import { useFetch } from '../../hooks/useFetch'
+import { useHistory } from 'react-router-dom'
 
 import React from 'react'
 
@@ -13,6 +14,7 @@ export default function Create() {
   const [bitterness, setBitterness] = useState("")
   const [description, setDescription] = useState("")
   const [descriptionFull, setDescriptionFull] = useState("")
+  const history = useHistory()
 
   const { postData, data, error } = useFetch("http://localhost:3000/beers", "POST")
 
@@ -20,6 +22,13 @@ export default function Create() {
     e.preventDefault()
     postData({ title, distributor,type, abv: abv + ' %', bitterness, description, descriptionFull })
   }
+
+  // redirect user when we get data
+  useEffect(() => {
+    if (data) {
+      history.push('/')
+    }
+  },[data])
   return (
     <div className='create'>
       <h2 className='page-title'>Add a New Beer</h2>
