@@ -1,5 +1,6 @@
 import { useState } from 'react'
-// import { useSignup } from '../../hooks/useSignup'
+import { useSignup } from '../../hooks/useSignup'
+import { useHistory } from 'react-router-dom'
 
 // styles
 import styles from './Signup.module.css'
@@ -8,10 +9,13 @@ export default function Signup() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [displayName, setDisplayName] = useState('')
+  const { signup, isPending, error } = useSignup()
+  const history = useHistory()
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(email, password, displayName)
+    signup(email, password, displayName)
+    history.push('/')
   }
 
   return (
@@ -41,7 +45,9 @@ export default function Signup() {
           value={displayName}
         />
       </label>
-      <button className={styles['btn']}>Sign up</button>
+      {!isPending && <button className={styles['btn']}>Sign up</button>}
+      {isPending && <button className='btn' disabled>loading</button>}
+      {error && <p className='error'>{error}</p>}
     </form>
   )
 }
