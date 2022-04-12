@@ -4,6 +4,7 @@
     grid-gap: 40px;
     max-width: 1200px;
     margin: 40px auto;
+    padding-bottom: 20px;
   }
   .beer-list .card {
     background: #322315;

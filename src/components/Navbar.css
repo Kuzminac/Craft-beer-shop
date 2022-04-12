@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+
 .navbar {
     background: #322315;
     padding: 20px;
     color: #fff;
+  }
+  .navbar .logo {
+    width: 140px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50px;
+    margin-left: 12px;
   }
   .navbar nav {
     display: flex;
@@ -10,9 +19,19 @@
     margin: 0 auto;
   }
   .navbar a.brand {
+    font-family: 'Libre Baskerville', serif;
     margin-right: auto;
+    display: flex;
+    align-items: center;
     color: #fff;
     text-decoration: none;
+  }
+  .navbar h2 {
+    margin-left: 6px;
+    margin-top: 20px;
+  }
+  .navbar span {
+    color: #f0c908;
   }
   .navbar a:last-child {
     color: #fff;

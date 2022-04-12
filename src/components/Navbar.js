@@ -10,7 +10,8 @@ export default function Navbar() {
     <div className='navbar'>
         <nav>
             <Link to="/" className='brand'>
-                <h1>Craft Beer Database</h1>
+                <img src='https://uploads.turbologo.com/uploads/design/hq_preview_image/5037623/draw_svg20210613-16856-1t8mf7s.svg.png' alt='logo' className='logo'/>
+                <h2>Beer<span>House</span></h2>
             </Link>
             <Searchbar />
             <Link to="/create">Add New</Link>
