@@ -1,8 +1,8 @@
 import './Create.css'
 
 import { useState, useEffect} from 'react'
-import { useFetch } from '../../hooks/useFetch'
 import { useHistory } from 'react-router-dom'
+import { projectFirestore } from '../../firebase/config'
 
 import React from 'react'
 
@@ -13,22 +13,23 @@ export default function Create() {
   const [abv, setAbv] = useState('')
   const [bitterness, setBitterness] = useState("")
   const [description, setDescription] = useState("")
-  const [descriptionFull, setDescriptionFull] = useState("")
   const history = useHistory()
 
-  const { postData, data, error } = useFetch("http://localhost:3000/beers", "POST")
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    postData({ title, distributor,type, abv: abv + ' %', bitterness, description, descriptionFull })
+    const doc = { title, distributor,type, abv: abv + ' %', bitterness, description }
+
+    try {
+      await projectFirestore.collection('beers').add(doc)
+      history.push('/')
+    } catch(err) {
+      console.log(err)
+    }
   }
 
-  // redirect user when we get data
-  useEffect(() => {
-    if (data) {
-      history.push('/')
-    }
-  },[data])
+
   return (
     <div className='create'>
       <h2 className='page-title'>Add a New Beer</h2>
@@ -79,18 +80,10 @@ export default function Create() {
           />
         </label>
         <label>
-          <span>Short description:</span>
+          <span>Description:</span>
           <textarea 
             onChange={(e) => setDescription(e.target.value)}
             value={description}
-            required
-          />
-        </label>
-        <label>
-          <span>Full description:</span>
-          <textarea 
-            onChange={(e) => setDescriptionFull(e.target.value)}
-            value={descriptionFull}
             required
           />
         </label>

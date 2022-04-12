@@ -1,14 +1,30 @@
 import './Beer.css'
 
-import { useFetch } from '../../hooks/useFetch'
 import { useParams } from 'react-router-dom'
-
+import { projectFirestore } from '../../firebase/config'
 import React from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Beer() {
   const { id } = useParams()
-  const url = "http://localhost:3000/beers/" + id
-  const { error, isPending, data: beer } = useFetch(url)
+
+  const [beer, setBeer] = useState(null)
+  const [isPending, setIsPending] = useState(false)
+  const [error, setError] = useState(false)
+
+  useEffect(() => {
+    setIsPending(true)
+    projectFirestore.collection('beers').doc(id).get().then((doc) => {
+      if (doc.exists) {
+        setIsPending(false)
+        setBeer(doc.data())
+      } else {
+        setIsPending(false)
+        setError('Could not find that article')
+      }
+    })
+  },[id])
+
 
   return (
     <div className='beer'>
