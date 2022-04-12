@@ -8,6 +8,7 @@ import Home from './pages/home/Home'
 import Search from './pages/search/Search'
 import Create from './pages/create/Create'
 import Beer from './pages/beer/Beer'
+import Signup from './pages/signup/Signup'
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
           </Route>
           <Route path="/search">
             <Search />
+          </Route>
+          <Route path="/signup">
+            <Signup />
           </Route>
           <Route path="/beers/:id">
             <Beer />

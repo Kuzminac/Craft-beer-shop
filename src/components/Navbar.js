@@ -14,6 +14,7 @@ export default function Navbar() {
                 <h2>Beer<span>House</span></h2>
             </Link>
             <Searchbar />
+            <Link to="/signup" className='btn'>Sign up</Link>
             <Link to="/create">Add New</Link>
         </nav>
     </div>

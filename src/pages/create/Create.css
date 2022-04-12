@@ -1,6 +1,10 @@
 .create {
     max-width: 480px;
     margin: 60px auto;
+    background: #322315;
+    color: #fff;
+    padding: 16px;
+    border-radius: 8px;
 }
 .create input , textarea {
     background: #fff;
@@ -11,10 +15,10 @@
     margin: 12px 0 5px;
 }
 .create button {
-    color: #fff;
+    color: #322315;
     display: block;
     width: 100px;
-    background: #392818;
+    background: #f0c908;
     font-size: 1em;
     margin: 20px auto;
     text-decoration: none;
