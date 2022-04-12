@@ -14,7 +14,7 @@ export default function Beer() {
 
   useEffect(() => {
     setIsPending(true)
-    projectFirestore.collection('beers').doc(id).get().then((doc) => {
+    const unsub = projectFirestore.collection('beers').doc(id).onSnapshot((doc) => {
       if (doc.exists) {
         setIsPending(false)
         setBeer(doc.data())
@@ -23,6 +23,8 @@ export default function Beer() {
         setError('Could not find that article')
       }
     })
+
+    return () => unsub()
   },[id])
 
 
@@ -39,7 +41,7 @@ export default function Beer() {
             <li><p>abv: <span>{beer.abv}</span></p></li>
             <li><p>bitterness: <span>{beer.bitterness}</span></p></li>
           </ul>
-          <p><span>{beer.descriptionFull}</span></p>
+          <p><span>{beer.description}</span></p>
         </>
       )}
     </div>
