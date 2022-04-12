@@ -1,9 +1,14 @@
 import './BeerList.css'
 import { Link } from 'react-router-dom'
+import Trashcan from '../assets/img/trashcan.svg'
+import { projectFirestore } from '../firebase/config'
 
 import React from 'react'
 
 export default function BeerList({ beers }) {
+  const handleClick = (id) => {
+    projectFirestore.collection('beers').doc(id).delete()
+  }
   return (
     <div className='beer-list'>
         {beers.map(beer => (
@@ -14,6 +19,11 @@ export default function BeerList({ beers }) {
                 <p>abv: <span>{beer.abv}</span> </p>
                 <p><span>{beer.description}</span></p>
                 <Link to={`/beers/${beer.id}`}>See more</Link>
+                <img 
+                  className='delete'
+                  src={Trashcan}
+                  onClick={() => handleClick(beer.id)}
+                />
             </div>
         ))}
     </div>
