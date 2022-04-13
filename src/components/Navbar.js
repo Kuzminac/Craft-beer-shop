@@ -1,11 +1,14 @@
 import './Navbar.css'
 
 import { Link } from 'react-router-dom'
+import { useLogout } from '../hooks/useLogout'
 
 import React from 'react'
 import Searchbar from './Searchbar'
 
 export default function Navbar() {
+  const { logout } = useLogout()
+
   return (
     <div className='navbar'>
         <nav>
@@ -14,7 +17,9 @@ export default function Navbar() {
                 <h2>Beer<span>House</span></h2>
             </Link>
             <Searchbar />
+            <Link to="/login" className="btn">Login</Link>
             <Link to="/signup" className='btn'>Sign up</Link>
+            <button className='btn' onClick={logout}>Logout</button>
             <Link to="/create">Add New</Link>
         </nav>
     </div>

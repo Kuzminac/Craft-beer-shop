@@ -9,6 +9,7 @@ import Search from './pages/search/Search'
 import Create from './pages/create/Create'
 import Beer from './pages/beer/Beer'
 import Signup from './pages/signup/Signup'
+import Login from './pages/login/Login'
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route path="/search">
             <Search />
+          </Route>
+          <Route path="/login">
+            <Login />
           </Route>
           <Route path="/signup">
             <Signup />

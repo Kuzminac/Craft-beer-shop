@@ -33,6 +33,14 @@
   .navbar span {
     color: #f0c908;
   }
+  .navbar button {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+  }
   .navbar a:last-child {
     color: #fff;
     text-decoration: none;
@@ -52,4 +60,9 @@
     padding: 8px;
     border: 1px solid #fff;
     border-radius: 4px;
+  }
+  .navbar .btn:hover {
+    background: #f0c908;
+    border: 0;
+    color: #322315;
   }
