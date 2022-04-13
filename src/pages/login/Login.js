@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useLogin } from '../../hooks/useLogin'
+import { useHistory } from 'react-router-dom'
 
 // styles
 import styles from './Login.module.css'
@@ -8,10 +9,12 @@ export default function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const { login, error, isPending } = useLogin()
+  const history = useHistory()
 
   const handleSubmit = (e) => {
     e.preventDefault()
     login(email, password)
+    history.push('/')
   }
 
   return (
