@@ -21,6 +21,7 @@ export default function Signup() {
   return (
     <form onSubmit={handleSubmit} className={styles['signup-form']}>
       <h2>Sign up</h2>
+      <p>Signing up allows you to add new beers to the site and to rate them</p>
       <label>
         <span>email:</span>
         <input 

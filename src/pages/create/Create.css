@@ -6,6 +6,9 @@
     padding: 16px;
     border-radius: 8px;
 }
+.create h2 {
+    color: #fff;
+}
 .create input , textarea {
     background: #fff;
     text-decoration: none;
