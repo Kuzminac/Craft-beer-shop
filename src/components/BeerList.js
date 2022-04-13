@@ -21,6 +21,7 @@ export default function BeerList({ beers }) {
                 <Link to={`/beers/${beer.id}`}>See more</Link>
                 <img 
                   className='delete'
+                  alt='delete icon'
                   src={Trashcan}
                   onClick={() => handleClick(beer.id)}
                 />

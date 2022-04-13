@@ -1,6 +1,6 @@
 import './Create.css'
 
-import { useState, useEffect} from 'react'
+import { useState} from 'react'
 import { useHistory } from 'react-router-dom'
 import { projectFirestore } from '../../firebase/config'
 
