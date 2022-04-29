@@ -1,6 +1,7 @@
 .create {
     max-width: 480px;
-    margin: 60px auto;
+    max-height: 720px;
+    margin: 30px auto;
     background: #322315;
     color: #fff;
     padding: 16px;
